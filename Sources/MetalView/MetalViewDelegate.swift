@@ -10,6 +10,9 @@ import MetalKit
 public protocol MetalViewDelegate: MTKViewDelegate {
     var device: MTLDevice { get }
     init(device: MTLDevice)
+    
+    func setupMetal()
+    func setupBuffer()
 }
 
 

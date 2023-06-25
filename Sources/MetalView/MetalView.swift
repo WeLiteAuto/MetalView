@@ -15,7 +15,7 @@ public struct MetalView: UIViewRepresentable {
     
     public typealias UIViewType = MTKView
     
-    let delegate: MetalViewDelegate
+    public let delegate: MetalViewDelegate
     
     public func makeUIView(context: Context) -> MTKView {
         let mtkView = MTKView()
@@ -39,7 +39,7 @@ public struct MetalView: NSViewRepresentable {
     
     public typealias NSViewType = MTKView
     
-    let delegate: MetalViewDelegate
+    public let delegate: MetalViewDelegate
     
     
     public func makeNSView(context: Context) -> MTKView {
