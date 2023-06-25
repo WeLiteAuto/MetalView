@@ -11,13 +11,13 @@ import MetalKit
 import SwiftUI
 
 #if os(iOS)
-struct MetalView: UIViewRepresentable {
+public struct MetalView: UIViewRepresentable {
     
-    typealias UIViewType = MTKView
+    public typealias UIViewType = MTKView
     
     let delegate: MetalViewDelegate
     
-    func makeUIView(context: Context) -> MTKView {
+    public func makeUIView(context: Context) -> MTKView {
         let mtkView = MTKView()
         mtkView.delegate = delegate
         mtkView.device = delegate.device
@@ -27,22 +27,22 @@ struct MetalView: UIViewRepresentable {
         return mtkView
     }
     
-    func updateUIView(_ uiView: MTKView, context: Context) {}
+    public func updateUIView(_ uiView: MTKView, context: Context) {}
     
 }
 
 #elseif os(macOS)
 
 
-struct MetalView: NSViewRepresentable {
+public struct MetalView: NSViewRepresentable {
     
     
-    typealias NSViewType = MTKView
+    public typealias NSViewType = MTKView
     
     let delegate: MetalViewDelegate
     
     
-    func makeNSView(context: Context) -> MTKView {
+    public func makeNSView(context: Context) -> MTKView {
         let mtkView = MTKView()
         mtkView.delegate = delegate
         mtkView.device = delegate.device
@@ -52,7 +52,7 @@ struct MetalView: NSViewRepresentable {
         return mtkView
     }
     
-    func updateNSView(_ nsView: MTKView, context: Context) {}
+    public func updateNSView(_ nsView: MTKView, context: Context) {}
         
 }
 

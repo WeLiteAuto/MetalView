@@ -7,7 +7,7 @@
 
 import MetalKit
 
-protocol MetalViewDelegate: MTKViewDelegate {
+public protocol MetalViewDelegate: MTKViewDelegate {
     var device: MTLDevice { get }
     init(device: MTLDevice)
 }
