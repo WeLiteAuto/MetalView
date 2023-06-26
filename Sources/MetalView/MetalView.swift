@@ -27,7 +27,7 @@ public struct MetalView: UIViewRepresentable {
         mtkView.device = delegate.device
         mtkView.clearColor = MTLClearColor(red: 0, green: 0, blue: 0, alpha: 1)
         mtkView.colorPixelFormat = .bgra8Unorm
-        mtkView.depthStencilPixelFormat = .depth32Float
+        mtkView.depthStencilPixelFormat = .invalid
         return mtkView
     }
     
@@ -56,7 +56,7 @@ public struct MetalView: NSViewRepresentable {
         mtkView.device = delegate.device
         mtkView.clearColor = MTLClearColor(red: 0, green: 0, blue: 0, alpha: 1)
         mtkView.colorPixelFormat = .bgra8Unorm
-        mtkView.depthStencilPixelFormat = .depth32Float
+        mtkView.depthStencilPixelFormat = .invalid
         return mtkView
     }
     
