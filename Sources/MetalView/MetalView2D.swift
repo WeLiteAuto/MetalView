@@ -11,7 +11,7 @@ import MetalKit
 import SwiftUI
 
 #if os(iOS)
-public struct MetalView: UIViewRepresentable {
+public struct MetalView2D: UIViewRepresentable {
     
     public typealias UIViewType = MTKView
     
@@ -38,7 +38,7 @@ public struct MetalView: UIViewRepresentable {
 #elseif os(macOS)
 
 
-public struct MetalView: NSViewRepresentable {
+public struct MetalView2D: NSViewRepresentable {
     
     
     public typealias NSViewType = MTKView
